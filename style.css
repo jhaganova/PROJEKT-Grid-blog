@@ -9,17 +9,153 @@ body {
 	font-family:  'Alice', serif;
 	font-size: 18px;
 	line-height: 1.5;
+	background-color: #f4fafd;
 }
 
 h1, h2, h3 {
 	font-family: 'Kaushan Script', cursive;
 	font-weight: normal;
 	margin: 0;
+	color: var(--zelena);
 }
 
 blockquote {
 	font-family: 'Kaushan Script', cursive;
 }
+
+/* ddddddddddddddddddddddddddddddd */
+
+.blog {
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr;
+	column-gap: 40px;
+	align-items: start;
+	max-width: 1150px;
+	margin: auto;
+}
+
+header,
+h2,
+p,
+footer {
+	grid-column: 2;
+}
+
+blockquote,
+figure {
+	grid-column: 1 / span 3;
+}
+
+figure img {
+	max-width: 100%;
+}
+
+.meta,
+figcaption {
+	color: var(--seda);
+}
+
+.tip {
+	color: var(--tmava);
+	background-color: var(--svetla);
+	padding: 20px;
+	font-size: 16px;
+	position: relative;
+}
+
+.tip img {
+	max-width: 100%;
+}
+
+.tip-vlevo {
+	grid-column: 1;
+	text-align: right;
+}
+
+.tip-vpravo {
+	grid-column: 3;
+}
+
+.tip-vlevo::before,
+.tip-vpravo::before {
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	border: 1px solid var(--oranzova);
+}
+
+.tip-vpravo::before {
+	left: 0;
+}
+
+.tip-vlevo::before {
+	right: 0;
+}
+
+.tip a {
+	color: var(--cervena);
+}
+
+.tip p {
+	margin: 0;
+}
+
+h1 {
+	font-size: 82px;
+	margin-bottom: 50px;
+}
+
+h2 {
+	font-size: 64px;
+	margin: 20px 0;
+}
+
+p {
+	margin-top: 0;
+}
+
+blockquote {
+	text-align: center;
+	color: var(--seda);
+	font-size: 36px;
+}
+
+blockquote::before,
+blockquote::after {
+	content: "";
+	display: block;
+	width: 150px;
+	height: 3px;
+	background-color: var(--limetka);
+	margin: auto;
+}
+
+blockquote::before {
+	margin-bottom: 30px;
+}
+
+blockquote::after {
+	margin-top: 30px;
+}
+
+
+figure {
+	margin: 40px 0;
+
+	padding: 0;
+}
+
+footer,
+footer a {
+	color: var(--seda);
+	margin-top: 40px;
+	font-size: 14px;
+
+}
+
 
 /* --------------------------------------------------- */
 
